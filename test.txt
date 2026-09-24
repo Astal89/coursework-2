@@ -1,0 +1,18 @@
+-- добавить 4 вопроса
+curl.exe -i -X POST "http://localhost:8080/exam/java/add?question=Q1&answer=A1"
+curl.exe -i -X POST "http://localhost:8080/exam/java/add?question=Q2&answer=A2"
+curl.exe -i -X POST "http://localhost:8080/exam/java/add?question=Q3&answer=A3"
+curl.exe -i -X POST "http://localhost:8080/exam/java/add?question=Q4&answer=A4"
+curl.exe -i -X POST "http://localhost:8080/exam/java/add?question=Q5&answer=A5"
+
+-- удалить один вопрос
+curl.exe -i -X DELETE "http://localhost:8080/exam/java/remove?question=Q2&answer=A2"
+
+-- получить список всех вопросов
+curl.exe -i -X GET "http://localhost:8080/exam/java"
+
+-- получит 3 случайных вопроса
+curl.exe -i -X GET "http://localhost:8080/exam/get/2"
+
+-- получить больше вопросов чем есть
+curl.exe -i -X GET "http://localhost:8080/exam/get/5"
